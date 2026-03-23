@@ -13,9 +13,9 @@
 - HTML/CSS
 
 ## 📸 Demo
-(ảnh demo)
+
 
 ## ⚙️ Setup
 ```bash
-pip install -r requirements.txt
-python app.py
+pip install .
+python run.py
