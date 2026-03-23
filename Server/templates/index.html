@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Search</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='/style.css')}}">
+</head>
+<body>
+
+<div class="container">
+    <div class="title"> Tìm kiếm ảnh</div>
+    <form action="{{url_for('search_query')}}" method="GET">
+        <div class="icon">
+        <input type="text" name="search_query" placeholder="Bạn muốn tìm hình ảnh nào...">
+        <img src="../static/images/search.png" width="36" />
+        </div>
+        <button type="submit">Tìm kiếm</button>
+    </form>
+
+
+    <div class="title"> Upload ảnh</div>
+    <form action="{{url_for('update_embedding')}}"method="POST" enctype="multipart/form-data">
+        <div class="icon">
+            <input type="file" name="file" accept="image/*">
+            <img src="../static/images/cloud.png" width="36" />
+        </div>
+        <button type="submit">Upload ảnh</button>
+    </form>
+</div>
+</div>
+</body>
+</html>

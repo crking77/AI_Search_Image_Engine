@@ -8,9 +8,11 @@ import matplotlib.pyplot as plt
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 import os
 from pathlib import Path
-PATH_IMAGES_DATA = r"D:\PTIT\AI\PROJECTS\AI_Engine_Search\images_data"
-batch_size = 150
-collection_name="Vector_data_collection"
+
+BASE_DIR = Path(__file__).resolve().parent
+PATH_IMAGES_DATA = BASE_DIR/"images_data"
+batch_size = 20
+collection_name = "Vector_data_collection"
 model = SentenceTransformer( 
     model_name_or_path="clip-ViT-B-32",
     device= device,
@@ -18,7 +20,7 @@ model = SentenceTransformer(
     trust_remote_code=False
     )
 
-client = QdrantClient(path="imagesVector_store")
+client = QdrantClient(path=str(BASE_DIR/"Vector_data_collection"))
 def embedding_Database():
     if not client.collection_exists(collection_name):
         client.create_collection(
@@ -36,7 +38,7 @@ def embedding_Database():
                 )
             del images_open
 def embedding_and_result(query_input):
-    query_embedding = model.encode(query_input, normalize_embeddings= True, device= device)
+    query_embedding = model.encode(query_input, normalize_embeddings= True)
     result = client.query_points(
         collection_name = collection_name,
         query= query_embedding,
@@ -44,6 +46,7 @@ def embedding_and_result(query_input):
     ).points
     return result
 if __name__ == "__main__":
+    embedding_Database()
     query_input = input("Enter your query: ")
     result = embedding_and_result(query_input)
     plt.figure(figsize=(10,5))

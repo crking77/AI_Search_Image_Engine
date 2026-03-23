@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.env
+build/
+dist/
+wheels/
+app_embedding/images_data/
+app_embedding/Vector_data_collection/
+imagesVector_store/
+Server/__pycache__
+*.egg-info
+
