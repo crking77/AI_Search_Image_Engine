@@ -12,7 +12,7 @@
 - HTML/CSS
 
 ## 📸 Demo
-(ảnh demo)
+![Demo](assets/demo.png) 
 
 ## ⚙️ Setup
 ```bash
