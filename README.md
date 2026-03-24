@@ -13,7 +13,7 @@
 
 ## 📸 Demo
 <p align="center">
-  <img src="assets/demo.gif" width="700"/>
+  <img src="assets/demo.gif" width="500"/>
 </p>
 
 ## ⚙️ Setup
