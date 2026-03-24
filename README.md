@@ -12,7 +12,9 @@
 - HTML/CSS
 
 ## 📸 Demo
-![Demo](assets/demo.gif) 
+<p align="center">
+  <img src="assets/demo.gif" width="700"/>
+</p>
 
 ## ⚙️ Setup
 ```bash
