@@ -11,10 +11,10 @@
 - Sentence Transformers (CLIP (clip-ViT-B-32"))
 - HTML/CSS
 
-## Demo
-![Demo](assets/demo.gif)
+## 📸 Demo
+(ảnh demo)
 
 ## ⚙️ Setup
 ```bash
-pip install -r requirements.txt
-python app.py
+pip install .
+python run.py
