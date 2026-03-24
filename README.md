@@ -1,19 +1,18 @@
 - AI Image Search Engine
 
-## 🚀 Features
+## Features
 - Search image by text (CLIP)
-- Search image by image
 - Upload image → auto embedding → store Qdrant
 - Fast vector search
 
-## 🧠 Tech Stack
+## Tech Stack
 - Flask
 - Qdrant
-- Sentence Transformers (CLIP)
+- Sentence Transformers (CLIP (clip-ViT-B-32"))
 - HTML/CSS
 
-## 📸 Demo
-(ảnh demo)
+## Demo
+![Demo](assets/demo.gif)
 
 ## ⚙️ Setup
 ```bash
